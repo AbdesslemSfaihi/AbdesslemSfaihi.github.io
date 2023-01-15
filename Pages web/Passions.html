@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Web Personnel</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=FAMILY_NAME:wght@WEIGHT_OR_RANGE&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!--Nav bar-->
+    <div class="hero1">
+        <nav>
+            <h2 class="logo">Site Web <span>Personnel</span></h2>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+                
+            </ul>
+        </nav>
+
+        <br>
+    <!--section plus d'info-->
+    <div class="moi1">
+        <div class="title1">
+            <h2>Passions, Sports Préférés et Qualités</h2><br><br>
+        </div>
+        <div class="box1">
+            <div class="card1">
+                
+                <h5>Passions, Sports Préférés et Qualités</h5>
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                      <div class="numbertext">1 / 3</div>
+                      <img src="../images/friendly.jpg" style="width:100%">
+                      <div class="text">Amical</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <div class="numbertext">2 / 3</div>
+                      <img src="../images/calisthenics.jpg" style="width:100%">
+                      <div class="text">Calisthenics</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <div class="numbertext">3 / 3</div>
+                      <img src="../images/music.jpg" style="width:100%">
+                      <div class="text">Musique</div>
+                    </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                    
+                    </div>
+                    <br>
+                    
+                    <div style="text-align:center">
+                      <span class="dot" onclick="currentSlide(1)"></span> 
+                      <span class="dot" onclick="currentSlide(2)"></span> 
+                      <span class="dot" onclick="currentSlide(3)"></span> 
+                    </div>
+                    
+                    <script>
+                    let slideIndex = 1;
+                    showSlides(slideIndex);
+                    
+                    function plusSlides(n) {
+                      showSlides(slideIndex += n);
+                    }
+                    
+                    function currentSlide(n) {
+                      showSlides(slideIndex = n);
+                    }
+                    
+                    function showSlides(n) {
+                      let i;
+                      let slides = document.getElementsByClassName("mySlides");
+                      let dots = document.getElementsByClassName("dot");
+                      if (n > slides.length) {slideIndex = 1}    
+                      if (n < 1) {slideIndex = slides.length}
+                      for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                      }
+                      for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                      }
+                      slides[slideIndex-1].style.display = "block";  
+                      dots[slideIndex-1].className += " active";
+                    }
+                    </script>
+
+            
+        </div>
+    </div>
+    
+</div>
+    
+
+    <!--footer-->
+    <footer>
+        <p>Sfaihi Abdesslem</p>
+        <p>Vous pouvez me suivre sur</p>
+        <div class="social">
+            <a href="https://www.facebook.com/slim.sfaihi.9/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/abdesslem_s/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com/AbdesslemSfaihi"><i class="fa-brands fa-square-twitter"></i></a>
+        </div>
+        <p class="end">CopyRight By Sfaihi Abdesslem 2023</p>
+    </footer>
+</body>
+</html>
